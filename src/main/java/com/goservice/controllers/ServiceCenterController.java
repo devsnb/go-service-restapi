@@ -3,6 +3,8 @@ package com.goservice.controllers;
 import com.goservice.model.Category;
 import com.goservice.model.ServiceCenter;
 import com.goservice.service.IServiceCenterService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +15,8 @@ import java.util.List;
 @RestController
 @RequestMapping("service-center-api")
 public class ServiceCenterController {
+
+    private Logger logger = LoggerFactory.getLogger(ServiceCenterController.class);
 
     @Autowired
     private IServiceCenterService serviceCenterService;

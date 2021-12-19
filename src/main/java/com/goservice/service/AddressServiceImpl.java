@@ -1,3 +1,9 @@
+/**
+ * The Service Layer Class For Address
+ *
+ * @author Snehangshu Biswas
+ */
+
 package com.goservice.service;
 
 import com.goservice.exceptions.AddressNotFoundException;
@@ -64,7 +70,7 @@ public class AddressServiceImpl implements IAddressService {
      * Find and returns addresses based on the locality name provided
      *
      * @param locality Locality name in the address
-     * @return Returns a list of address found in the database
+     * @return Returns a list of Address found in the database
      * @throws AddressNotFoundException If no address is found in the database based on the provided info
      */
     @Override
@@ -79,6 +85,13 @@ public class AddressServiceImpl implements IAddressService {
         return addresses;
     }
 
+    /**
+     * Finds and returns Addresses based on the state name provided
+     *
+     * @param state State name in the address
+     * @return Returns a list of Address found in the database
+     * @throws AddressNotFoundException If no address is found in the database based in the provided info
+     */
     @Override
     public List<Address> getByState(String state) throws AddressNotFoundException {
         List<Address> addresses = new ArrayList<>();
@@ -91,6 +104,13 @@ public class AddressServiceImpl implements IAddressService {
         return addresses;
     }
 
+    /**
+     * Finds and returns Addresses based on the city name provided
+     *
+     * @param city City name in the address
+     * @return Returns a list of Address found in the database
+     * @throws AddressNotFoundException If no address is found in the database based in the provided info
+     */
     @Override
     public List<Address> getByCity(String city) throws AddressNotFoundException {
         List<Address> addresses = new ArrayList<>();
@@ -103,6 +123,13 @@ public class AddressServiceImpl implements IAddressService {
         return addresses;
     }
 
+    /**
+     * Finds and returns Addresses based on the zipcode provided
+     *
+     * @param zipcode Zipcode in the address
+     * @return Returns a list of Address found in the database
+     * @throws AddressNotFoundException If no address is found in the database based in the provided info
+     */
     @Override
     public List<Address> getByZipcode(int zipcode) throws AddressNotFoundException {
         List<Address> addresses = new ArrayList<>();
