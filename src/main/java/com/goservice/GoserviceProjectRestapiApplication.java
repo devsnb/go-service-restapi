@@ -35,39 +35,37 @@ public class GoserviceProjectRestapiApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
 //        Address address = new Address();
-//        address.setZipcode(700078);
-//        address.setState("West Bengal");
-//        address.setCity("Kolkata");
-//        address.setLocality("SamarPally");
+//        address.setZipcode(500081);
+//        address.setState("Telengana");
+//        address.setCity("Hyderabad");
+//        address.setLocality("Madhapur");
 //
 //        Vehicle vehicle1 = new Vehicle();
-//        vehicle1.setManufacturer("FORD");
-//        vehicle1.setModel("A54F");
+//        vehicle1.setManufacturer("AUDI");
+//        vehicle1.setModel("F368");
 //        vehicle1.setCategory(Category.FOUR_WHEELER);
 //        Vehicle savedVehicle = vehicleService.addVehicle(vehicle1);
 //
 //        Vehicle vehicle2 = new Vehicle();
-//        vehicle2.setManufacturer("AUDI");
-//        vehicle2.setModel("F35AF");
+//        vehicle2.setManufacturer("LAND ROVER");
+//        vehicle2.setModel("SUV H65");
 //        vehicle2.setCategory(Category.FOUR_WHEELER);
 //        Vehicle savedVehicle2 = vehicleService.addVehicle(vehicle2);
 //
 //        Set<Vehicle> vehicles = new HashSet<>(Arrays.asList(savedVehicle, savedVehicle2));
 //
 //        ServiceCenter serviceCenter = new ServiceCenter();
-//        serviceCenter.setName("CAR DETAILING");
+//        serviceCenter.setName("EASY DETAIL");
 //        serviceCenter.setAddress(address);
-//        serviceCenter.setRating(4.6);
-//        serviceCenter.setAvgDuration("5Hrs");
+//        serviceCenter.setRating(4.5);
+//        serviceCenter.setAvgDuration("6Hrs");
 //        serviceCenter.setVehicles(vehicles);
 //        ServiceCenter savedCenter = serviceCenterService.addServiceCenter(serviceCenter);
-
-
-//        Service type = new Service();
-//        type.setName(ServiceType.DENT_PAINT);
-//        type.setServiceCenters(savedCenter);
-//        serviceService.addService(type);
-
+//
+//        Service service = new Service();
+//        service.setName(ServiceType.DETAILING);
+//        service.setServiceCenters(savedCenter);
+//        serviceService.addService(service);
 
     }
 }

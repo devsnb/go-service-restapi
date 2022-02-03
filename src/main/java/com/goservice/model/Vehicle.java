@@ -6,11 +6,6 @@ import lombok.*;
 import javax.persistence.*;
 import java.util.List;
 
-@Setter
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
 @Entity
 public class Vehicle {
     @Id
@@ -32,4 +27,73 @@ public class Vehicle {
     @ManyToMany(fetch = FetchType.EAGER, mappedBy = "vehicles")
     @JsonIgnore
     private List<ServiceCenter> serviceCenter;
+
+    public Vehicle() {
+    }
+
+    public Vehicle(Category category, String manufacturer, String model, List<ServiceCenter> serviceCenter) {
+        this.category = category;
+        this.manufacturer = manufacturer;
+        this.model = model;
+        this.serviceCenter = serviceCenter;
+    }
+
+    public Vehicle(Integer vehicleId, Category category, String manufacturer, String model, List<ServiceCenter> serviceCenter) {
+        this.vehicleId = vehicleId;
+        this.category = category;
+        this.manufacturer = manufacturer;
+        this.model = model;
+        this.serviceCenter = serviceCenter;
+    }
+
+    public Integer getVehicleId() {
+        return vehicleId;
+    }
+
+    public void setVehicleId(Integer vehicleId) {
+        this.vehicleId = vehicleId;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public List<ServiceCenter> getServiceCenter() {
+        return serviceCenter;
+    }
+
+    public void setServiceCenter(List<ServiceCenter> serviceCenter) {
+        this.serviceCenter = serviceCenter;
+    }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "vehicleId=" + vehicleId +
+                ", category=" + category +
+                ", manufacturer='" + manufacturer + '\'' +
+                ", model='" + model + '\'' +
+                ", serviceCenter=" + serviceCenter +
+                '}';
+    }
 }

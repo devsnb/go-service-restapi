@@ -30,13 +30,13 @@ public class AddressController {
     /**
      * Adds an address to the database
      *
-     * @param address Address object without addressId for database entry
+     * @param address Address object without address id for database entry
      * @return returns the added to the address in database
      */
     @PostMapping("/addresses")
     ResponseEntity<Address> addAddress(@RequestBody Address address) {
-        logger.debug("Inside Address Controller");
         logger.info("POST /address-api/addresses");
+        logger.debug("Inside Address Controller");
         logger.debug("Inside addAddress Method");
         Address createdAddress = addressService.addRentalAddress(address);
         logger.debug("addressService.addRentalAddress  Called");
@@ -46,13 +46,13 @@ public class AddressController {
     /**
      * Updates an existing address in the database
      *
-     * @param address Address object with addressId update
+     * @param address Address object with address id update
      * @return returns the updated address from the database
      */
     @PutMapping("/addresses")
     ResponseEntity<Address> updateAddress(@RequestBody Address address) {
-        logger.debug("Inside Address Controller");
         logger.info("PUT /address-api/addresses");
+        logger.debug("Inside Address Controller");
         logger.debug("Inside updateAddress Method");
         Address updatedAddress = addressService.updateAddress(address);
         logger.debug("addressService.updateAddress Called");
@@ -66,8 +66,8 @@ public class AddressController {
      */
     @DeleteMapping("/addresses/{addressId}")
     ResponseEntity<Void> deleteAddress(@PathVariable("addressId") int addressId) {
-        logger.debug("Inside Address Controller");
         logger.info("DELETE /address-api/addresses/{addressId}");
+        logger.debug("Inside Address Controller");
         logger.debug("Inside deleteAddress Method");
         addressService.deleteAddress(addressId);
         logger.debug("addressService.deleteAddress Called");
@@ -82,8 +82,8 @@ public class AddressController {
      */
     @GetMapping("/addresses/{addressId}")
     ResponseEntity<Address> getAddressById(@PathVariable("addressId") int addressId) {
-        logger.debug("Inside Address Controller");
         logger.info("GET /address-api/addresses/{addressId}");
+        logger.debug("Inside Address Controller");
         logger.debug("Inside getAddressById");
         Address address = addressService.getAddressById(addressId);
         logger.debug("addressService.getAddressById Called");
@@ -98,8 +98,8 @@ public class AddressController {
      */
     @GetMapping("/addresses/locality/{locality}")
     ResponseEntity<List<Address>> getByLocality(@PathVariable("locality") String locality) {
-        logger.debug("Inside Address Controller");
         logger.info("GET /addresses/locality/{locality}");
+        logger.debug("Inside Address Controller");
         logger.debug("Inside getByLocality Method");
         List<Address> addresses = addressService.getByLocality(locality);
         logger.debug("addressService.getByLocality Called");
@@ -114,8 +114,8 @@ public class AddressController {
      */
     @GetMapping("/addresses/state/{state}")
     ResponseEntity<List<Address>> getByState(@PathVariable("state") String state) {
-        logger.debug("Inside Address Controller");
         logger.info("GET addresses/addresses/state/{state}");
+        logger.debug("Inside Address Controller");
         logger.debug("Inside getByState Method");
         List<Address> addresses = addressService.getByState(state);
         logger.debug("addressService.getByState Called");
@@ -130,8 +130,8 @@ public class AddressController {
      */
     @GetMapping("/addresses/city/{city}")
     ResponseEntity<List<Address>> getByCity(@PathVariable("city") String city) {
-        logger.debug("Inside Address Controller");
         logger.info("GET addresses/addresses/city/{city}");
+        logger.debug("Inside Address Controller");
         logger.debug("Inside getByCity Method");
         List<Address> addresses = addressService.getByCity(city);
         logger.debug("addressService.getByCity Called");
@@ -146,8 +146,8 @@ public class AddressController {
      */
     @GetMapping("/addresses/zipcode/{zipcode}")
     ResponseEntity<List<Address>> getByZipcode(@PathVariable("zipcode") int zipcode) {
-        logger.debug("Inside Address Controller");
         logger.info("GET addresses/addresses/zipcode/{zipcode}");
+        logger.debug("Inside Address Controller");
         logger.debug("Inside getByZipcode Method");
         List<Address> addresses = addressService.getByZipcode(zipcode);
         logger.debug("addressService.getByZipcode Called");
